@@ -9,6 +9,7 @@ import subprocess
 #     except subprocess.CalledProcessError:
 #         return False  # Si la commande échoue (mot de passe incorrect)
 #utils n'était pas trouver sur mon pc donc j'ai fait une fonction qui va avoir la même utilité
+#cette fonction n'est plus utile car j'ai rectifier mon problème avec le utils.py
 # ----------------------------------------
 from utils import unzip_with_7z 
 
