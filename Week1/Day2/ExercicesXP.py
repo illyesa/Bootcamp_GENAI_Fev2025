@@ -103,7 +103,7 @@ brand.update(more_on_zara)
 
 ## 13.
 print(f"The updated number of stores is: {brand['number_stores']}.")
-we have a update of number_stores
+
 
 #4
 def describe_city(city, country="France"):
