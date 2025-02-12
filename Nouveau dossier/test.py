@@ -51,10 +51,42 @@
 # print("p.x is:", p.x)
 # print("p.y is:", p.y)
 
-def calculate_average(sentence):
-    list_of_word = sentence.split()
-    total=0
-    for word in list_of_word:
-        total+= len(word)
-    return round(total/len(list_of_word),1)
-print(calculate_average("bonjour comment cela va"))
+# def calculate_average(sentence):
+#     list_of_word = sentence.split()
+#     total=0
+#     for word in list_of_word:
+#         total+= len(word)
+#     return round(total/len(list_of_word),1)
+# print(calculate_average("bonjour comment cela va"))
+
+
+# class Circle:
+#     color = "red"
+
+# class NewCircle(Circle):
+#     color = "blue"
+
+# nc = NewCircle
+# print(nc.color)
+# # >> What will be the output ?
+# class Circle:
+#     def __init__(self, diameter):
+#       self.diameter = diameter
+
+#     def grow(self, factor=2):
+#         """grows the circle's diameter by factor"""
+#         self.diameter = self.diameter * factor
+
+# class NewCircle(Circle):
+#     def grow(self, factor=2):
+#         """grows the area by factor..."""
+#         self.diameter = (self.diameter * factor * 2)
+
+# nc = NewCircle(1)
+# print(nc.diameter)
+
+# nc.grow()
+
+# print(nc.diameter)
+# # >> What will be the output
+
