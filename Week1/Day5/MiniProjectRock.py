@@ -7,7 +7,7 @@ class Game:
         choices = {"r": "rock", "p": "paper", "s": "scissors", "rock": "rock", "paper": "paper", "scissors": "scissors"}
         user_input = ""
         while user_input not in choices:
-            user_input = input("Choose rock (r), paper (p), or scissors (s): ").lower()
+            user_input = input("Select (r)ock, (p)aper, or (s)cissors: ").lower()
             if user_input not in choices:
                 print("Wrong chose")
         return choices[user_input]
@@ -29,7 +29,7 @@ class Game:
         user_item = self.get_user_item()
         computer_item = self.get_computer_item()
         result = self.get_game_result(user_item, computer_item)
-        print(f"You selected {user_item}. The computer selected {computer_item}. You {result}!")
+        print(f"You chose {user_item}. The computer chose {computer_item}. Result: {result}")
         return result
 
 
@@ -48,8 +48,8 @@ def get_user_menu_choice():
 
 
 def print_results(results):
-    print("\nGame Summary:")
-    print(f"Wins: {results['win']}, Losses: {results['loss']}, Draws: {results['draw']}")
+    print("\nGame Results:")
+    print(f"You won {results['win']} times \nYou Lost {results['loss']} times \nYou drew {results['draw']} times")
 
 
 def main():
@@ -64,7 +64,7 @@ def main():
             print_results(results)
         elif choice == "x":
             print_results(results)
-            print("Thank you for playing!")
+            print("\nThank you for playing!")
             break
 
 
