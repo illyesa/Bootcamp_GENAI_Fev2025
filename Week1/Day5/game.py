@@ -6,6 +6,8 @@ class Game:
         user_input = ""
         while user_input not in choices:
             user_input = input("Choose rock (r), paper (p), or scissors (s): ").lower()
+            if user_input not in choices:
+                print("Wrong chose")
         return choices[user_input]
 
     def get_computer_item(self):
