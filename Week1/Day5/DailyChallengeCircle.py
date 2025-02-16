@@ -9,7 +9,7 @@ class Circle:
         elif diameter is not None:
             self.radius = diameter / 2
         else:
-            raise ValueError("Either radius or diameter must be provided.")
+            raise ValueError("No radius and no diameter.")
     
     @property
     def diameter(self):
@@ -64,6 +64,12 @@ class Circle:
             return self.radius >= other.radius
         return NotImplemented
 
+def sorted_circle(circles):
+    sorted_circles = sorted(circles)
+    for circle in sorted_circles:
+        print(circle)
+    return sorted_circles
+        
 def draw_circles(circles):
     turtle.speed(0)
     turtle.penup()
@@ -78,23 +84,19 @@ def draw_circles(circles):
     
     turtle.done()
 
-# Example usage:
 c1 = Circle(radius=5)
 c2 = Circle(diameter=10)
 c3 = Circle(radius=7)
+print(c1)
+print(c2)
+print(c3)
 
-print(c1)  # Circle(radius=5, diameter=10, area=78.54)
-print(c2)  # Circle(radius=5, diameter=10, area=78.54)
-print(c3)  # Circle(radius=7, diameter=14, area=153.94)
+c4 = c1 + c3 
+print(c4)
 
-c4 = c1 + c3  # New circle with radius 12
-print(c4)  # Circle(radius=12, diameter=24, area=452.39)
-
-print(c1 < c3)  # True
-print(c1 == c2)  # True
+print(c1 < c3)
+print(c1 == c2)
 
 circles = [c3, c1, c4, c2]
-circles_sorted = sorted(circles)
-print(circles_sorted)
-
-draw_circles(circles_sorted)
+sor_circles = sorted_circle(circles)
+draw_circles(sor_circles)

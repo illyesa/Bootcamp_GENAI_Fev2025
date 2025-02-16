@@ -90,4 +90,3 @@
 # print(nc.diameter)
 # # >> What will be the output
 
-print(divmod(8,3))
