@@ -1,3 +1,5 @@
+
+
 def display_board(board):
     i = 0
     print("\nTIC TAC TOE")
@@ -13,24 +15,24 @@ def player_input(player, board):
     while True:
         try:
             move = int(input(f"Player {player}, enter your move (1-9): ")) - 1
-            row, col = divmod(move, 3)
+            row, col = divmod(move, 3) #i found divmod() that combines // and %
             if board[row][col] == " ":
                 board[row][col] = player
                 break
             else:
-                print("That spot is already taken. Try again.")
+                print("That spot is taken. Try again.")
         except (ValueError, IndexError):
             print("Invalid input. Enter a number between 1 and 9.")
 
 def check_win(board):
     winning_combinations = [
-        [(0, 0), (0, 1), (0, 2)],  # Rows
+        [(0, 0), (0, 1), (0, 2)],
         [(1, 0), (1, 1), (1, 2)],
         [(2, 0), (2, 1), (2, 2)],
-        [(0, 0), (1, 0), (2, 0)],  # Columns
+        [(0, 0), (1, 0), (2, 0)],
         [(0, 1), (1, 1), (2, 1)],
         [(0, 2), (1, 2), (2, 2)],
-        [(0, 0), (1, 1), (2, 2)],  # Diagonals
+        [(0, 0), (1, 1), (2, 2)],
         [(0, 2), (1, 1), (2, 0)]
     ]
     for combo in winning_combinations:
@@ -50,12 +52,12 @@ def play():
         winner = check_win(board)
         if winner:
             display_board(board)
-            print(f"Player {winner} wins!")
+            print(f"Player {winner} wins")
             return
         turn = 1 - turn 
     
     display_board(board)
-    print("It's a tie!")
+    print("Tie")
 
 if __name__ == "__main__":
     play()
