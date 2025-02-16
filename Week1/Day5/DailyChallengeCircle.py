@@ -64,11 +64,12 @@ class Circle:
             return self.radius >= other.radius
         return NotImplemented
 
-def sorted_circle(circles):
-    sorted_circles = sorted(circles)
-    for circle in sorted_circles:
-        print(circle)
-    return sorted_circles
+    def sortedme(self, a):
+        a.append(self)
+        sorted_circles = sorted(circles)
+        for circle in sorted_circles:
+            print(circle)
+        return sorted_circles
         
 def draw_circles(circles):
     turtle.speed(0)
@@ -97,6 +98,23 @@ print(c4)
 print(c1 < c3)
 print(c1 == c2)
 
-circles = [c3, c1, c4, c2]
-sor_circles = sorted_circle(circles)
-draw_circles(sor_circles)
+circles = [c3, c1, c4]
+b=c2.sortedme(circles)
+draw_circles(b)
+
+# with a fonction outside of the class
+# def sorted_circle(circles):
+#     sorted_circles = sorted(circles)
+#     for circle in sorted_circles:
+#         print(circle)
+#     return sorted_circles
+# circles = [c3, c1, c4, c2]
+# sor_circles = sorted_circle(circles)
+# draw_circles(sor_circles)
+
+# without a fonction
+# circles = [c3, c1, c4, c2]
+# circles_sorted = sorted(circles)
+# print(circles_sorted)
+
+# draw_circles(circles_sorted)
