@@ -90,3 +90,7 @@
 # print(nc.diameter)
 # # >> What will be the output
 
+a = "Python"
+print(a[2:5])
+b= range(5)
+print(b)
